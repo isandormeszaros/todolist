@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+   <html lang="hu">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="./assets/css/styles.css">
+      <title>Task Nexus</title>
+   </head>
+   <body>
+      <header class="header" id="header">
+         <nav class="nav"><img src="assets/images/todolist-logo.png" alt="todolist-logo" class="todo-logo">
+            <a href="#" class="nav-title">ask Nexus'</a>
+         </nav>
+      </header>
+
+      <div class="valid-task-error"><span id="valid-task-error"></span></div>
+      <div class="container">
+         <div class="new-task">
+            <input type="text" id="new-task-input" placeholder="create a new todos...">
+            <button id="add-task-btn" class="add-task-btn"><i class="ri-add-fill"></i></button>
+         </div>
+
+         <div class="current-tasks margin start-task" id="current-tasks"></div>
+
+         <div id="menu-bar" class="menu-bar margin">
+            <p class="random-image" id="random-image" onclick="randomIMG()">Change Background</p>
+         </div>
+     </div>
+
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
