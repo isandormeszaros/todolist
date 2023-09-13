@@ -99,6 +99,9 @@ function addTask() {
                     taskText.contentEditable = false;
                 }
             });  
+        
+        //LOCAL STORAGE WITH JSON
+        let storage = JSON.parse(localStorage.getItem('tasks')) || []
 
        
         }
@@ -125,7 +128,7 @@ taskInput.addEventListener("keydown", function (event) {
 });
 
 //RANDOM IMAGE CHANGE
-var images = [
+ var images = [
     'assets/images/background-1.png',
     'assets/images/background-2.png',
     'assets/images/background-3.png',
@@ -134,10 +137,14 @@ var images = [
 ]
 
 var img = document.getElementById('random-image')
-function randomIMG(num){
-    var num = Math.floor(Math.random() * 5);
-    document.body.style.backgroundImage = 'url("' + images[num] + '")';
+
+
+function randomIMG() {
+    var num = Math.floor(Math.random() * images.length);
+    img.style.backgroundImage = 'url("' + images[num] + '")';
     img.style.backgroundAttachment = "fixed";
     img.style.backgroundRepeat = "no-repeat";
     img.style.backgroundSize = "cover";
 }
+
+window.addEventListener('load', randomIMG);
